@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kanira Advisor | Authorized Business Partner - Mirae Asset Sharekhan</title>
+<style>
+:root{--orange:#f37021;--navy:#111d3a;--blue:#1d3567;--bg:#f5f7fb;--txt:#1e293b;--mut:#64748b;--brd:#dce3ee;--green:#16a34a}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Roboto,Arial,sans-serif}
+body{color:var(--txt);background:#fff;line-height:1.55;scroll-behavior:smooth}
+a{text-decoration:none;color:inherit}
+.top{background:var(--navy);color:#e2e8f0;font-size:12px;padding:7px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center}
+.badge-ap{background:var(--orange);color:#fff;padding:3px 9px;border-radius:3px;font-weight:700;font-size:11px}
+header{background:#fff;box-shadow:0 2px 12px rgba(17,29,58,.08);position:sticky;top:0;z-index:100;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:center;gap:10px}
+.k-logo{width:42px;height:42px;background:linear-gradient(135deg,var(--navy),var(--orange));color:#fff;font-weight:900;font-size:19px;border-radius:8px;display:grid;place-items:center}
+.b-txt h1{font-size:19px;color:var(--navy);font-weight:800;line-height:1.1}
+.b-txt small{font-size:11px;color:var(--orange);font-weight:700;letter-spacing:.5px}
+nav{display:flex;gap:16px;align-items:center;font-size:13.5px;font-weight:600;flex-wrap:wrap}
+nav a:hover{color:var(--orange)}
+.btn-open{background:var(--orange);color:#fff !important;padding:9px 16px;border-radius:5px;font-weight:700}
+.hero{background:linear-gradient(135deg,#0d1730 0%,#1d3567 65%,#274685 100%);color:#fff;padding:50px 5% 65px}
+.hero-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;align-items:center}
+.hero h2{font-size:34px;line-height:1.2;margin-bottom:12px}
+.hero-list{list-style:none;margin:16px 0 22px;font-size:14.5px;color:#e2e8f0}
+.hero-list li{margin-bottom:8px}
+.hero-list li::before{content:"✔ ";color:var(--orange);font-weight:bold}
+.kyc-box{background:#fff;color:var(--txt);border-radius:10px;padding:24px;box-shadow:0 15px 35px rgba(0,0,0,.3);border-top:5px solid var(--orange)}
+.steps-bar{display:flex;justify-content:space-between;margin-bottom:16px;font-size:11px;font-weight:700;color:var(--mut);border-bottom:1px solid var(--brd);padding-bottom:8px}
+.step-dot.act{color:var(--orange)}
+.kyc-box input,.kyc-box select{width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--brd);border-radius:5px;font-size:13.5px}
+.otp-row{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:10px}
+.otp-row input{text-align:center;font-weight:800;font-size:16px;padding:8px}
+.cap-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.cap-code{background:#e2e8f0;color:var(--navy);font-weight:900;letter-spacing:3px;padding:8px 14px;border-radius:5px;font-family:monospace;font-size:16px;user-select:none}
+.btn-full{width:100%;padding:11px;background:var(--orange);color:#fff;border:none;border-radius:5px;font-weight:800;font-size:14px;cursor:pointer}
+.btn-sec{width:100%;padding:9px;background:var(--navy);color:#fff;border:none;border-radius:5px;font-weight:700;font-size:13px;cursor:pointer;margin-top:6px}
+section{padding:52px 5%}.alt{background:var(--bg)}.sec-h{text-align:center;margin-bottom:32px}
+.sec-h h2{font-size:27px;color:var(--navy);margin-bottom:6px}.sec-h p{color:var(--mut);font-size:14px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--brd);border-top:4px solid var(--blue);border-radius:8px;padding:22px}
+.card h3{color:var(--navy);margin-bottom:8px;font-size:17px}
+.orange-club{background:linear-gradient(90deg,#fff7ed,#ffedd5);border:1.5px solid #fdba74;border-radius:10px;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:28px}
+.stats{background:var(--navy);color:#fff;padding:40px 5%;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;text-align:center}
+.stats h3{font-size:30px;color:var(--orange)}
+footer{background:#091022;color:#cbd5e1;padding:42px 5% 20px;font-size:12.5px}
+.f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin-bottom:20px}
+footer h4{color:#fff;margin-bottom:8px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:999;justify-content:center;align-items:center;padding:15px}
+.m-box{background:#fff;padding:24px;border-radius:8px;max-width:440px;width:100%;position:relative}
+.m-box input,.m-box select{width:100%;padding:9px;margin-bottom:10px;border:1px solid var(--brd);border-radius:4px}
+.close{position:absolute;top:10px;right:14px;font-size:22px;cursor:pointer;font-weight:bold}
+</style>
+</head>
+<body><div class="top">
+  <div><span class="badge-ap">AUTHORIZED BUSINESS PARTNER</span> &nbsp; Kanira Advisor • Mirae Asset Sharekhan Sub-Broker</div>
+  <div>
+    📞 <strong>+91 98200 00000</strong> &nbsp;|&nbsp;
+    <button onclick="openLeads()" style="background:#f37021;color:#fff;border:none;padding:3px 10px;border-radius:3px;font-weight:700;cursor:pointer;font-size:11px">📋 Admin: View Leads (<span id="leadCnt">0</span>)</button>
+  </div>
+</div>
+<header>
+  <a href="#" class="brand"><div class="k-logo">KA</div><div class="b-txt"><h1>KANIRA ADVISOR</h1><small>Mirae Asset Sharekhan Business Partner</small></div></a>
+  <nav><a href="#products">Products</a><a href="#platforms">Platforms</a><a href="#calculators">Calculators</a><a href="#contact">Contact</a><a href="#kyc-section" class="btn-open">OPEN DEMAT ACCOUNT</a></nav>
+</header>
+<div class="hero" id="kyc-section">
+  <div class="hero-grid">
+    <div>
+      <span class="badge-ap">100% DIGITAL ONBOARDING • ZERO OPENING FEE*</span>
+      <h2>Open Free* Demat &amp; Trading Account in 15 Mins**</h2>
+      <p style="color:#cbd5e1">Open your Mirae Asset Sharekhan account through Kanira Advisor for dedicated local advisory, research-backed stock baskets, and instant IPO/SIP execution.</p>
+      <ul class="hero-list">
+        <li>₹0 Account Opening Charge* &amp; 1st Year Demat AMC Waived</li>
+        <li>Instant KRA &amp; DigiLocker Aadhaar Paperless KYC</li>
+        <li>Equity, F&amp;O, Mutual Funds, IPO, Commodity &amp; US Stocks (GIFT City)</li>
+        <li>Dedicated Kanira Advisor Relationship Manager Support</li>
+      </ul>
+      <div class="orange-club">
+        <div><strong style="color:#9a3412;font-size:15px">Investing ₹5 Lakhs+ with Kanira Advisor?</strong><p style="font-size:12.5px;color:#7c2d12">Select our Orange Club A/C Opening Package for priority wealth support.</p></div>
+        <button class="btn-open" style="border:none;cursor:pointer" onclick="selectOrange()">Select Orange Club</button>
+      </div>
+    </div>
+    <div class="kyc-box">
+      <div class="steps-bar">
+        <span class="step-dot act" id="st1">1. Mobile/OTP</span>
+        <span class="step-dot" id="st2">2. PAN/KYC</span>
+        <span class="step-dot" id="st3">3. Bank</span>
+        <span class="step-dot" id="st4">4. Segments</span>
+        <span class="step-dot" id="st5">5. e-Sign</span>
+      </div>
+      <!-- STEP 1 -->
+      <div id="pane1">
+        <h3 style="color:var(--navy);margin-bottom:4px">Step 1: Mobile &amp; OTP Verification</h3>
+        <p style="font-size:12px;color:var(--mut);margin-bottom:10px">Enter your Aadhaar-linked mobile number</p>
+        <input id="kMob" type="tel" maxlength="10" placeholder="10-digit Mobile Number (e.g. 9820012345) *">
+        <div class="cap-row">
+          <span class="cap-code" id="capTxt">SK749</span>
+          <button type="button" onclick="genCap()" style="padding:7px 10px;border:1px solid var(--brd);background:#fff;border-radius:4px;cursor:pointer;font-size:12px">↻ Refresh</button>
+          <input id="capIn" style="margin:0;text-transform:uppercase" placeholder="Enter CAPTCHA *">
+        </div>
+        <button class="btn-full" onclick="sendOtp()">SEND OTP</button>
+        <div id="otpArea" style="display:none;margin-top:12px;background:#f0fdf4;padding:10px;border-radius:6px;border:1px solid #bbf7d0">
+          <p style="font-size:12px;color:#15803d;font-weight:700;margin-bottom:6px" id="otpHint"></p>
+          <div class="otp-row">
+            <input maxlength="1" class="od" oninput="nxt(this,0)"><input maxlength="1" class="od" oninput="nxt(this,1)"><input maxlength="1" class="od" oninput="nxt(this,2)">
+            <input maxlength="1" class="od" oninput="nxt(this,3)"><input maxlength="1" class="od" oninput="nxt(this,4)"><input maxlength="1" class="od" oninput="nxt(this,5)">
+          </div>
+          <button class="btn-full" onclick="verifyOtp()">VERIFY OTP &amp; CONTINUE →</button>
+        </div>
+        <label style="display:flex;gap:6px;font-size:11px;color:var(--mut);margin-top:10px"><input type="checkbox" id="consent" checked style="width:auto;margin:0"> I consent to digital onboarding through MASK &amp; agree to Sharekhan T&amp;Cs.</label>
+      </div>
+      <!-- STEP 2 -->
+      <div id="pane2" style="display:none">
+        <h3 style="color:var(--navy);margin-bottom:10px">Step 2: PAN &amp; KRA KYC Details</h3>
+        <input id="kName" placeholder="Full Name (As per PAN Card) *">
+        <input id="kPan" maxlength="10" style="text-transform:uppercase" placeholder="PAN Number (e.g. ABCDE1234F) *">
+        <input id="kDob" type="date" title="Date of Birth *">
+        <input id="kEmail" type="email" placeholder="Email Address *">
+        <select id="kKyc"><option value="KRA Verified">KRA KYC Verified (Fast-Track 15 Min Activation)</option><option value="DigiLocker + IPV">New KYC via DigiLocker + Video IPV</option></select>
+        <button class="btn-full" onclick="validateStep2()">Verify PAN &amp; Next →</button>
+        <button class="btn-sec" onclick="goStep(1)">← Back</button>
+      </div>
+      <!-- STEP 3 -->
+      <div id="pane3" style="display:none">
+        <h3 style="color:var(--navy);margin-bottom:10px">Step 3: Bank Account &amp; IFSC</h3>
+        <select id="kBank"><option>HDFC Bank</option><option>ICICI Bank</option><option>State Bank of India (SBI)</option><option>Axis Bank</option><option>Kotak Mahindra Bank</option><option>Bank of Baroda / Other</option></select>
+        <input id="kAcc" placeholder="Bank Account Number *">
+        <input id="kIfsc" maxlength="11" style="text-transform:uppercase" placeholder="11-Char IFSC Code (e.g. HDFC0000123) *">
+        <input id="kNom" placeholder="Nominee Full Name (Recommended)">
+        <button class="btn-full" onclick="validateStep3()">Verify Bank &amp; Next →</button>
+        <button class="btn-sec" onclick="goStep(2)">← Back</button>
+      </div>
+      <!-- STEP 4 -->
+      <div id="pane4" style="display:none">
+        <h3 style="color:var(--navy);margin-bottom:10px">Step 4: Select Segments &amp; Brokerage Plan</h3>
+        <select id="kPlan"><option value="Standard Free Demat">Standard Plan (₹0 Opening + 1st Yr AMC Free)</option><option value="Orange Club (₹5L+)">Orange Club Privilege Plan (₹5 Lakh+ Investment)</option></select>
+        <div style="font-size:13px;background:var(--bg);padding:10px;border-radius:5px;margin-bottom:10px;line-height:1.8">
+          <label><input type="checkbox" class="seg" value="Equity & IPO" checked style="width:auto"> Equity Cash &amp; IPO (NSE / BSE)</label><br>
+          <label><input type="checkbox" class="seg" value="Mutual Funds" checked style="width:auto"> Mutual Funds &amp; SIPs</label><br>
+          <label><input type="checkbox" class="seg" value="F&O" style="width:auto"> Futures &amp; Options (F&amp;O)</label><br>
+          <label><input type="checkbox" class="seg" value="Commodity & Currency" style="width:auto"> Commodity (MCX) &amp; Currency</label><br>
+          <label><input type="checkbox" class="seg" value="US Global Markets" style="width:auto"> Global US Markets (GIFT City)</label>
+        </div>
+        <button class="btn-full" onclick="finishApplication()">Complete &amp; Generate e-Sign ID →</button>
+        <button class="btn-sec" onclick="goStep(3)">← Back</button>
+      </div>
+      <!-- STEP 5 -->
+      <div id="pane5" style="display:none;text-align:center">
+        <div style="font-size:36px">✅</div>
+        <h3 style="color:var(--navy);margin:4px 0">KYC Saved &amp; Ready for e-Sign!</h3>
+        <div style="background:var(--bg);padding:10px;border-radius:6px;font-weight:800;color:var(--navy);margin:8px 0;font-size:13px" id="refBox"></div>
+        <p style="font-size:12px;color:var(--mut);margin-bottom:12px">Your application has been saved to Kanira Advisor's desk. Complete Aadhaar e-Sign on Sharekhan's official portal or send details on WhatsApp:</p>
+        <a href="https://sharekhan.com" target="_blank" class="btn-full" style="display:block;margin-bottom:8px">🔐 Proceed to Official Sharekhan e-Sign</a>
+        <button class="btn-full" style="background:#25d366" onclick="sendWaApp()">📲 Send Full Details to Kanira Advisor (WhatsApp)</button>
+        <button class="btn-sec" onclick="location.reload()">+ Open Another Account</button>
+      </div>
+    </div>
+  </div>
+</div><section id="products">
+  <div class="sec-h"><h2>360° Financial Products &amp; Services</h2><p>Comprehensive wealth &amp; trading solutions powered by Mirae Asset Sharekhan</p></div>
+  <div class="grid4">
+    <div class="card"><h3>📈 Equity &amp; IPO</h3><p>Research-backed stock picks, 1-click ASBA IPO applications, Margin Trading Facility (MTF), and Pattern Finder.</p></div>
+    <div class="card"><h3>⚡ Futures &amp; Options</h3><p>Advanced Option Chain, Rohit Indicators, multi-leg strategy builders, and disciplined risk-managed F&amp;O advisory.</p></div>
+    <div class="card"><h3>🌱 Mutual Funds &amp; SIPs</h3><p>Start SIPs from ₹500/month in curated 'Funds We Like', tax-saving ELSS (80C), and NFOs with zero paperwork.</p></div>
+    <div class="card" id="global"><h3>🌎 Global US Markets &amp; PMS</h3><p>Invest in 10,000+ US Stocks &amp; Fractional Shares from $1 via GIFT City (IFSCA regulated), PMS, AIF &amp; Corporate FDs.</p></div>
+  </div>
+</section>
+<section id="platforms" class="alt">
+  <div class="sec-h"><h2>Feature-Rich Trading Platforms</h2><p>Built by traders who code — accessible across mobile, web &amp; desktop</p></div>
+  <div class="grid4">
+    <div class="card"><h3>📱 Sharekhan App</h3><p>All-in-one mobile trading, live market scanners, instant fund transfer, and portfolio tracking.</p></div>
+    <div class="card"><h3>🐯 InvesTiger App</h3><p>Curated thematic stock baskets starting at ₹50,000 designed by Mirae Asset Sharekhan's research team.</p></div>
+    <div class="card"><h3>💻 TradeTiger Desktop</h3><p>Multi-screen charting, tick-by-tick data, heatmaps, and lightning-fast keyboard order execution.</p></div>
+    <div class="card"><h3>🤖 Algo &amp; Trading APIs</h3><p>Connect your Python trading bots and automated strategies directly to Sharekhan's low-latency APIs.</p></div>
+  </div>
+</section>
+<section id="calculators">
+  <div class="sec-h"><h2>Financial Planning Calculators</h2><p>Plan your SIP wealth creation and refer friends</p></div>
+  <div class="grid4" style="max-width:950px;margin:0 auto">
+    <div class="card">
+      <h3>🧮 SIP Wealth Calculator</h3>
+      <input type="number" id="sipAmt" value="10000" style="width:100%;padding:8px;margin-bottom:8px;border:1px solid var(--brd)" placeholder="Monthly SIP (₹)">
+      <input type="number" id="sipYrs" value="15" style="width:100%;padding:8px;margin-bottom:8px;border:1px solid var(--brd)" placeholder="Years">
+      <input type="number" id="sipRet" value="12" style="width:100%;padding:8px;margin-bottom:8px;border:1px solid var(--brd)" placeholder="Expected Return %">
+      <button class="btn-full" onclick="calcSip()">Calculate Future Value</button>
+      <p id="sipRes" style="margin-top:10px;font-weight:800;color:var(--navy);font-size:14px"></p>
+    </div>
+    <div class="card">
+      <h3>🤝 Refer &amp; Earn Program</h3>
+      <p style="font-size:13.5px;color:var(--mut);margin-bottom:14px">Refer friends &amp; family to Kanira Advisor and earn up to <strong>₹1,500*/month</strong> in referral rewards.</p>
+      <a href="#kyc-section" class="btn-full" style="display:block;text-align:center">Refer a Client Now</a>
+    </div>
+  </div>
+</section><div class="stats"><div><h3>32 Lakh+</h3><p>Sharekhan Customers</p></div><div><h3>4,200+</h3><p>Centres Across 1,100+ Cities</p></div><div><h3>₹3 Lakh Cr+</h3><p>Customer Assets</p></div><div><h3>$734.2 Bn</h3><p>Mirae Asset Global AUM</p></div></div>
+<footer id="contact"><div class="f-grid"><div><h4>Kanira Advisor</h4><p>Authorized Business Partner (Sub-Broker) — Mirae Asset Sharekhan</p></div><div><h4>Principal Broker</h4><p>Sharekhan Ltd • SEBI Regn: INZ000171337 • DP: IN-DP-365-2018 • ARN: 20669</p></div><div><h4>Regulatory Links</h4><p>SEBI | NSE | BSE | CDSL | NSDL | SCORES | SMART ODR</p></div></div><p style="border-top:1px solid #1e293b;padding-top:10px;font-size:11px;color:#94a3b8">SEBI Risk Disclosure: Investments in securities market are subject to market risks, read all related documents carefully before investing.</p></footer>
+<div class="modal" id="leadsM"><div class="m-box" style="max-width:720px"><span class="close" onclick="document.getElementById('leadsM').style.display='none'">&times;</span><h3 style="color:var(--navy);margin-bottom:10px">Kanira Advisor — Saved Account Applications</h3><div id="leadsList" style="max-height:300px;overflow:auto;font-size:12px;margin-bottom:10px"></div><button class="btn-full" onclick="exportLeads()">⬇ Download All Applications (Excel CSV)</button></div></div>
+<script>
+let curCap="SK749",genOtp="",lastApp=null,leads=JSON.parse(localStorage.getItem('kanira_leads')||'[]');
+document.getElementById('leadCnt').innerText=leads.length;
+function genCap(){const c="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";curCap=Array.from({length:5},()=>c[Math.floor(Math.random()*c.length)]).join('');document.getElementById('capTxt').innerText=curCap;}
+function sendOtp(){
+  const m=document.getElementById('kMob').value.trim(),cp=document.getElementById('capIn').value.trim().toUpperCase();
+  if(!/^[6-9]\d{9}$/.test(m))return alert('Enter a valid 10-digit mobile number.');
+  if(cp!==curCap)return alert('CAPTCHA mismatch. Enter '+curCap);
+  if(!document.getElementById('consent').checked)return alert('Please accept consent.');
+  genOtp=String(Math.floor(100000+Math.random()*900000));
+  document.getElementById('otpArea').style.display='block';
+  document.getElementById('otpHint').innerText='OTP Sent to +91 '+m+' (Test OTP: '+genOtp+')';
+  document.querySelectorAll('.od').forEach((x,i)=>x.value=genOtp[i]);
+}
+function nxt(el,i){if(el.value.length===1&&i<5)document.querySelectorAll('.od')[i+1].focus();}
+function verifyOtp(){if(Array.from(document.querySelectorAll('.od')).map(x=>x.value).join('')!==genOtp)return alert('Invalid OTP');goStep(2);}
+function validateStep2(){
+  if(document.getElementById('kName').value.trim().length<3)return alert('Enter Full Name as per PAN.');
+  if(!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(document.getElementById('kPan').value.trim().toUpperCase()))return alert('Enter valid 10-char PAN (e.g. ABCDE1234F).');
+  if(!document.getElementById('kEmail').value.includes('@'))return alert('Enter valid Email.');
+  goStep(3);
+}
+function validateStep3(){
+  if(document.getElementById('kAcc').value.trim().length<8)return alert('Enter valid Bank Account Number.');
+  if(!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(document.getElementById('kIfsc').value.trim().toUpperCase()))return alert('Enter valid 11-char IFSC (e.g. HDFC0000123).');
+  goStep(4);
+}
+function finishApplication(){
+  const segs=Array.from(document.querySelectorAll('.seg:checked')).map(x=>x.value).join(', ');
+  lastApp={ref:'KANIRA-SK-'+Math.floor(100000+Math.random()*900000),date:new Date().toLocaleString('en-IN'),name:document.getElementById('kName').value.trim(),mobile:document.getElementById('kMob').value.trim(),pan:document.getElementById('kPan').value.trim().toUpperCase(),dob:document.getElementById('kDob').value||'NA',email:document.getElementById('kEmail').value.trim(),kyc:document.getElementById('kKyc').value,bank:document.getElementById('kBank').value,account:document.getElementById('kAcc').value.trim(),ifsc:document.getElementById('kIfsc').value.trim().toUpperCase(),nominee:document.getElementById('kNom').value.trim()||'None',plan:document.getElementById('kPlan').value,segments:segs||'Equity & IPO'};
+  leads.unshift(lastApp);localStorage.setItem('kanira_leads',JSON.stringify(leads));document.getElementById('leadCnt').innerText=leads.length;
+  document.getElementById('refBox').innerText='Ref ID: '+lastApp.ref+' | '+lastApp.name+' ('+lastApp.pan+')';goStep(5);
+}
+function goStep(s){for(let i=1;i<=5;i++){document.getElementById('pane'+i).style.display=(i===s?'block':'none');document.getElementById('st'+i).classList.toggle('act',i<=s);}}
+function selectOrange(){document.getElementById('kPlan').value='Orange Club (₹5L+)';goStep(1);alert('Orange Club Package selected! Complete Step 1.');}
+function sendWaApp(){if(!lastApp)return;const msg=`*New Sharekhan Demat Application - Kanira Advisor*
+Ref: ${lastApp.ref}
+Name: ${lastApp.name}
+Mobile: ${lastApp.mobile}
+PAN: ${lastApp.pan}
+Bank: ${lastApp.bank} (${lastApp.ifsc})
+Plan: ${lastApp.plan}
+Segments: ${lastApp.segments}`;window.open('https://wa.me');}
+function openLeads(){document.getElementById('leadsM').style.display='flex';document.getElementById('leadsList').innerHTML=leads.length?leads.map(l=>`<div style="padding:8px;border-bottom:1px solid #e2e8f0"><b>${l.ref}</b> • ${l.date}<br><b>${l.name}</b> | Mob: ${l.mobile} | PAN: ${l.pan} | Bank: ${l.bank} (${l.ifsc}) | Plan: ${l.plan}</div>`).join(''):'<p>No applications submitted yet.</p>';}
+function exportLeads(){if(!leads.length)return alert('No leads.');const hdr='Ref_ID,Date,Name,Mobile,PAN,DOB,Email,KYC,Bank,Account,IFSC,Nominee,Plan,Segments
+';const rows=leads.map(l=>[l.ref,l.date,l.name,l.mobile,l.pan,l.dob,l.email,l.kyc,l.bank,l.account,l.ifsc,l.nominee,l.plan,l.segments].map(v=>'"'+v+'"').join(',')).join('
+');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([hdr+rows],{type:'text/csv'}));a.download='Kanira_Advisor_Leads.csv';a.click();}
+function calcSip(){const P=+document.getElementById('sipAmt').value,n=+document.getElementById('sipYrs').value*12,r=(+document.getElementById('sipRet').value)/1200;document.getElementById('sipRes').innerText='Estimated Corpus: ₹ '+Math.round(P*((Math.pow(1+r,n)-1)/r)*(1+r)).toLocaleString('en-IN');}
+</script></body></html>
